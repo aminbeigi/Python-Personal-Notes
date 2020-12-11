@@ -1,4 +1,4 @@
-""" Static and Class Methods 
+"""Static and Class Methods 
 
 Instance methods need a class instance and can access the instance through self.
 Class methods don’t need a class instance. They can’t access the instance (self) but they have access to the class itself via cls.
