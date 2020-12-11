@@ -36,6 +36,5 @@ class Person:
         return age >= 18
 
 person = Person('Bob', 18)
-
-print(Person.get_population())
-print(Person.is_adult(3))
+print(Person.get_population()) # 5251
+print(Person.is_adult(18)) # True
