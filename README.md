@@ -1,2 +1,2 @@
 # Python-Personal-Notes
-my epic notes on stuff relating to Python
+my epic notes on Python stuff
