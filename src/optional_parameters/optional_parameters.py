@@ -1,5 +1,5 @@
 """ Optional Parameters """
-# can give parameters default values
+# can give parameters default values that can be overwritten
 
 class Car(object):
     def __init__(self, make, year, colour, condition='New', mileage=0, faults=None):
