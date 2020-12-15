@@ -14,4 +14,4 @@ lime[0], lime.red # 75, 75
 # example 2
 Point = namedtuple('Point', ['x', 'y', 'z'])
 p = Point(11, 74, None) # Point(x=11, y=74, z=None)
-p # Point(x=11, y=74, z=None)
+p # Point(x=11, y=74, z=None)   
