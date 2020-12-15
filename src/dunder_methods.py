@@ -8,14 +8,14 @@ class Car:
     
     """ __str__() 
     Invoked when you use an object with print statement.
-    Computes the "informal" or nicley printable string representation of an object.
+    Computes the "informal" or nicely printable string representation of an object.
     """
     def __str__(self):
         return f"A {self.colour} car created in {self.year}."
     
     """ __repr__() 
     Invoked when you write an object's name on interactive python console.
-    Computes the "offical" string representaiotn of the object.
+    Computes the "offical" string representation of an object.
     """
     def __repr__(self):
         # type(self) => <class '__main__.Car'>
