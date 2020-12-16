@@ -5,26 +5,20 @@ import time
 A simple example of a decorator that is used to calculate time time a function took to execute.
 """
 
-def func(func):
+def timer(func):
     def wrapper(*args, **kwargs):
         start = time.time()
         rv = func(*args, **kwargs)
-        
         end = time.time()
-        print("Time:", end-start)
+        run_time = end - start
+        print(f"Finished running {func.__name__} in {run_time} seconds.")
         return rv
 
     return wrapper
 
-@func
-def func2(x, y):
-    time.sleep(1)
-    print(f"{x} and {y} are cool")
+@timer
+def waste_time(num):
+    for _ in range(num):
+        sum([i**2 for i in range(10000)])
 
-@func
-def func3():
-    for _ in range(1000000):
-        pass
-
-func2('cats', 'dogs') # Time: 1.0083093643188477
-func3() # Time: 0.020990848541259766
+waste_time(1000) # Finished running waste_time in 2.9801082611083984 seconds.
