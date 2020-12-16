@@ -2,7 +2,7 @@ import time
 
 """ Decorators 
 
-A simple example of a decorator that is used to calculate time time a function took to execute.
+A simple example of a decorator that is used to calculate the runtime of a function
 """
 
 def timer(func):
