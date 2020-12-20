@@ -21,6 +21,7 @@ class Car:
         return (f"<{self.__module__}.{type(self).__name__} object at {hex(id(self))}>")
 
     """__eq__()
+    Example of operator overloading.
     Implement == functionality on objects.
     """
     def __eq__(self, other):
