@@ -1,6 +1,6 @@
 import time
 
-""" Decorators 
+"""Decorators 
 
 A simple example of a decorator that is used to calculate the runtime of a function.
 """

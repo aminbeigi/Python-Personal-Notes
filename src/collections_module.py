@@ -1,10 +1,11 @@
-"""built-in collections module 
+from collections import namedtuple
+
+"""Built-in collections module 
 
 The collections modules has some super cool stuff such as the namedtuple module - which
 is like the struct in C.
 """
 
-from collections import namedtuple
 # example 1
 Color = namedtuple('Color', ['red', 'green', 'blue'])
 lime = Color(75, 100, 0)

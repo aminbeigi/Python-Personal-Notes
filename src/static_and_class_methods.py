@@ -15,20 +15,20 @@ class Person:
         self.age = age
         Person.population += 1
     
-    """ instance method
+    """instance method
     takes self as a parameter, which points to an instance of Person
     """
     def get_name(self):
         return self.name
 
-    """ class methods
+    """class methods
     takes cls as a parameter, that points to Person not the object instance
     """
     @classmethod
     def get_population(cls):
         return cls.population
 
-    """ static methods
+    """static methods
     can neither modify object state nor Person's state
     """
     @staticmethod

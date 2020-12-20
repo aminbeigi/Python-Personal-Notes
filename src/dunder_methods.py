@@ -6,22 +6,21 @@ class Car:
         self.year = year
         self.colour = colour
     
-    """ __str__() 
+    """__str__() 
     Invoked when you use an object with print statement.
     Computes the "informal" or nicely printable string representation of an object.
     """
     def __str__(self):
         return f"A {self.colour} car created in {self.year}."
     
-    """ __repr__() 
+    """__repr__() 
     Invoked when you write an object's name on interactive python console.
     Computes the "offical" string representation of an object.
     """
     def __repr__(self):
-        # type(self) => <class '__main__.Car'>
         return (f"<{self.__module__}.{type(self).__name__} object at {hex(id(self))}>")
 
-    """ __eq__() 
+    """__eq__()
     Implement == functionality on objects.
     """
     def __eq__(self, other):
