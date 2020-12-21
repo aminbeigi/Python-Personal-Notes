@@ -1,32 +1,25 @@
-class Employee:
-    def __init__(self, first, last):
-        self.first = first
-        self.last = last
+"""Property decorator
+
+Python programming provides us with a built-in @property decorator which
+makes usage of getter and setters much easier in Object-Oriented Programming.
+"""
+
+class Celsius:
+    def __init__(self, temperature):
+        self._temperature = temperature
 
     @property
-    def email(self):
-        return f'{self.first}.{self.last}@email.com'
+    def temperature(self):
+        return self._temperature
 
-    @property
-    def fullname(self):
-        return f'{self.first} {self.last}'
-    
-    @fullname.setter
-    def fullname(self, name):
-        first, last = name.split(' ')
-        self.first = first
-        self.last = last
-    
-    @fullname.deleter
-    def fullname(self):
-        self.first = None
-        self.last = None
+    @temperature.setter
+    def temperature(self, value):
+        if value < -273.15:
+            raise ValueError("Temperature below -273 is not possible")
+        self._temperature = value
 
-emp_1 = Employee('John', 'Smith')
+celcius = Celsius(55)
 
-emp_1.email # John.Smith@email.com
-emp_1.fullname = 'Jonathan Smith'
-emp_1.email # Jonathan.Smith@email.com
-
-del emp_1.fullname
-emp_1.first, emp_1.last # None None
+celcius.temperature # 55
+celcius.temperature = 10
+celcius.temperature # 10
