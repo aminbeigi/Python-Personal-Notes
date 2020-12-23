@@ -9,7 +9,27 @@ import logging
 # CRITICAL: A serious error, indicating that the program itself may be unable to continue running.
 """
 
-logging.basicConfig(level=logging.DEBUG, filename='src/logging/test.log', format='%(asctime)s:%(levelname)s:%(message)s')
+"""Basic logger
+
+logging.basicConfig(filename='src/logging/test.log', level=logging.DEBUG, format='%(asctime)s:%(levelname)s:%(message)s')
+"""
+
+# create logger
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+
+# create file handler and set level to debug
+file_handler = logging.FileHandler('src/logging/test.log')
+file_handler.setLevel(logging.DEBUG)
+
+# create formatter
+formatter = logging.Formatter('[%(asctime)s] %(name)s %(levelname)s (%(funcName)s) %(message)s')
+
+# add formatter to file handler
+logger.addHandler(file_handler)
+
+# add file handler to logger
+file_handler.setFormatter(formatter)
 
 class Employee:
     emp_count = 0
@@ -18,7 +38,7 @@ class Employee:
         self.first_name = first_name
         self.last_name = last_name
         Employee.emp_count += 1
-        logging.debug(f"Employee number {Employee.emp_count} has been created.")
+        logger.debug(f'Employee number {Employee.emp_count} has been created.')
 
 emp_1 = Employee('Bob', 'Jane')
 emp_3 = Employee('John', 'Smith')
