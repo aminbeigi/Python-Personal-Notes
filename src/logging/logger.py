@@ -21,3 +21,5 @@ class Employee:
         logging.debug(f"Employee number {Employee.emp_count} has been created.")
 
 emp_1 = Employee('Bob', 'Jane')
+emp_3 = Employee('John', 'Smith')
+emp_2 = Employee('Luke', 'Skywalker')
