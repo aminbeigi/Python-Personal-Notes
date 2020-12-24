@@ -39,7 +39,6 @@ def people_generator(num_people):
                 }
         yield person
 
-
 people = people_list(1000000)
 sys.getsizeof(people) # 8448728 bytes
 
