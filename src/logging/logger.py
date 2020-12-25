@@ -38,7 +38,7 @@ class Employee:
         self.first_name = first_name
         self.last_name = last_name
         Employee.emp_count += 1
-        logger.debug(f'Employee number {Employee.emp_count} has been created.')
+        logger.debug(f"Employee number {Employee.emp_count} has been created.")
 
 emp_1 = Employee('Bob', 'Jane')
 emp_3 = Employee('John', 'Smith')
