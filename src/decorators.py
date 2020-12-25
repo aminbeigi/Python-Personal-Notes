@@ -11,7 +11,7 @@ def timer(func):
         rv = func(*args, **kwargs)
         end = time.time()
         run_time = end - start
-        print(f'Finished running {func.__name__} in {run_time} seconds.')
+        print(f"Finished running {func.__name__} in {run_time} seconds.")
         return rv
 
     return wrapper

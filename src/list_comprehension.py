@@ -10,7 +10,7 @@ for i in range(25):
     if i%2 == 0:
         lst.append(i)
     else:
-        lst.append('odd')
+        lst.append("odd")
 
 # list comprehension
 # [f(x) for i in iterable]
