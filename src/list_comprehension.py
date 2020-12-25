@@ -14,10 +14,10 @@ for i in range(25):
 
 # list comprehension
 # [f(x) for i in iterable]
-comp_lst = [i if i%2==0 else 'odd' for i in range(25)]
+comp_lst = [i if i%2==0 else "odd" for i in range(25)]
 
 # lambda
-lamba_lst = [(lambda i: i if i%2==0 else 'odd')(i) for i in range(25)]
+lamba_lst = [(lambda i: i if i%2==0 else "odd")(i) for i in range(25)]
 
 # lamba map
-map_lamba_lst = list(map(lambda i: i if i%2==0 else 'odd', range(25)))
+map_lamba_lst = list(map(lambda i: i if i%2==0 else "odd", range(25)))

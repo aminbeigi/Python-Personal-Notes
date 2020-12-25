@@ -54,7 +54,7 @@ def csv_reader(file_name):
 
 # good - open the file loop though each line, yields each row instead of returning 
 def csv_reader1(file_name):
-    for row in open(file_name, "r"):
+    for row in open(file_name, 'r'):
         yield row
 
 csv_gen = (row for row in open('src/generators/sample_data.csv')) # generator comprehension
