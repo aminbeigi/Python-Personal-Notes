@@ -1,4 +1,4 @@
-# concurrency in Python
+# Concurrency in Python
 * Concurrency means multiple computations are happening at the same time.
 
 ## Multithreading
