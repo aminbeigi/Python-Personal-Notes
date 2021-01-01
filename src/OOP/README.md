@@ -1,4 +1,4 @@
-# Object Oriented Programming stuff
+# Object Oriented Programming
 
 ## Static and Class Methods 
 * Instance methods need a class instance and can access the instance through self.
