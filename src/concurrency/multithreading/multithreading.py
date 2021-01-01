@@ -4,39 +4,39 @@ import time
 """synchronous code snippet"""
 start = time.perf_counter()
 
-# def foo():
-#     print("Sleeping 1 second...")
-#     time.sleep(1)
-#     print('Done sleeping...')
+def foo():
+    print("Sleeping 1 second...")
+    time.sleep(1)
+    print('Done sleeping...')
 
-# foo()
-# foo()
-# finish = time.perf_counter()
+foo()
+foo()
+finish = time.perf_counter()
 
-# print(f'Finished in {round(finish-start, 2)} second(s)') # Finished in 2.01 second(s)
+print(f'Finished in {round(finish-start, 2)} second(s)') # Finished in 2.01 second(s)
 
 
-# import threading
-# """old way to do threading"""
-# start = time.perf_counter()
+import threading
+"""old way to do threading"""
+start = time.perf_counter()
 
-# def foo1():
-#     print("Sleeping 1 second...")
-#     time.sleep(1)
-#     print('Done sleeping...')
+def foo1():
+    print("Sleeping 1 second...")
+    time.sleep(1)
+    print('Done sleeping...')
 
-# threads = []
-# for _ in range(2):
-#     t = threading.Thread(target=foo1)
-#     t.start()
-#     threads.append(t)
+threads = []
+for _ in range(2):
+    t = threading.Thread(target=foo1)
+    t.start()
+    threads.append(t)
 
-# for thread in threads:
-#     thread.join()
+for thread in threads:
+    thread.join()
 
-# finish = time.perf_counter()
+finish = time.perf_counter()
 
-# print(f'Finished in {round(finish-start, 2)} second(s)') # Finished in 1.01 second(s)
+print(f'Finished in {round(finish-start, 2)} second(s)') # Finished in 1.01 second(s)
 
 
 import concurrent.futures
