@@ -25,3 +25,10 @@ if x or y or z:
 
 if any((x, y, z)):
     print("passed")
+
+"""string splicing"""
+string = 'Batman'
+string[0:-1] #'Batma'
+string[:-1] #'Batma'
+string[:-3] #'Bat'
+string[-1] #'n'
