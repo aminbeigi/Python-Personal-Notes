@@ -25,9 +25,9 @@ class Car:
     Implement == functionality on objects.
     """
     def __eq__(self, other):
-            if isinstance(other, Car):
-                if other.make == self.make:
-                    return True
+        if isinstance(other, Car):
+            if other.make == self.make:
+                return True
 
 car1 = Car('Ford', 2014, 'red')
 car2 = Car('Ford', 2016, 'white')
