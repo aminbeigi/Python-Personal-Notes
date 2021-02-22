@@ -13,7 +13,6 @@ def timer(func):
         run_time = end - start
         print(f"Finished running {func.__name__} in {run_time} seconds.")
         return rv
-
     return wrapper
 
 @timer
@@ -21,4 +20,4 @@ def waste_time(num):
     for _ in range(num):
         sum([i**2 for i in range(10000)])
 
-waste_time(1000) # Finished running waste_time in 2.9801082611083984 seconds.
+waste_time(1000) # finished running waste_time in 2.9801082611083984 seconds
