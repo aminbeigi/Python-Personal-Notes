@@ -1,11 +1,6 @@
-"""Tips and Tricks
+"""Tips and Tricks"""
 
-Includes some smaller pythonic stuff.
-"""
-
-"""merging dictionaries
-overwriting duplicates from left to write
-"""
+"""merging dictionaries"""
 x = {'a': 1, 'b': 2}
 y = {'b': 3, 'c': 4}
 z = {**x, **y} # z = {'a': 1, 'b': 3, 'c': 4} 
@@ -14,21 +9,28 @@ z = {**x, **y} # z = {'a': 1, 'b': 3, 'c': 4}
 x, y, z = 0, 1, 0
 
 if x == 1 or y == 1 or z == 1:
-    print("passed")
-
+    pass
 if 1 in (x, y, z):
-    print("passed")
-
+    pass
 # These only test for truthiness:
 if x or y or z:
-    print("passed")
-
+    pass
 if any((x, y, z)):
-    print("passed")
+    pass
 
 """string splicing"""
 string = 'Batman'
-string[0:-1] #'Batma'
-string[:-1] #'Batma'
-string[:-3] #'Bat'
-string[-1] #'n'
+string[:2]  # 'Ba'
+string[:-2]  # 'Batm'
+
+string[2:]  # 'tman'
+string[-2:]  # 'an'
+
+string[-1]   # 'n'
+string[::-1] # 'namtaB'
+
+"""string character check"""
+password = 'carr0t33'
+any(c.isdigit() for c in password) # True
+any(c.islower() for c in password) # True
+any(c.isupper() for c in password) # False
