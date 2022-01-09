@@ -1,7 +1,7 @@
 # Pythonic Tips and Tricks
 
 ## Merging Lists
-You can use single star/asterisk `*` to **unpack argument lists**.
+You can use single star/asterisk `*` to **unpack lists**.
 
 ```py
 >>> even = [i for i in range(1, 11, 2)]
@@ -12,7 +12,7 @@ You can use single star/asterisk `*` to **unpack argument lists**.
 ```
 
 ## Merging Dictionaries
-You can use double star/asterisk `**` to **unpack argument key value pairs**.
+You can use double star/asterisk `**` to **unpack dicts**.
 
 ```py
 >>> fruits = {'apple': 1, 'tomato': 2}
