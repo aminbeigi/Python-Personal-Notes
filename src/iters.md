@@ -22,7 +22,7 @@ Traceback (most recent call last):
 StopIteration
 ```
 
-Here `e` remembers its position, and every time we call `next(e)` it gives us the next element and moves forward. When it has no more values to give us, calling `next(e)` raises a StopIteration:
+Here `e` remembers its position, and every time we call `next(e)` it gives us the next element and moves forward. When it has no more values to give us, calling `next(e)` raises a `StopIteration`:
 
 ## Converting to iterators
 There is a built-in function called `iter()` that converts anything iterable into an iterator.
@@ -155,18 +155,18 @@ We compare the size of the list and the generator using `sys.getsizeof()` to get
 
 ```python
 >>> num = 1000000
->>> people = people_list(num)
->>> sys.getsizeof(people)
+>>> people0 = people_list(num)
+>>> sys.getsizeof(people0)
 8448728
->>> people = people_generator(num)
+>>> people1 = people_generator(num)
 >>> sys.getsizeof(people1)
 112
 ```
 
 ## Example 2
-Another example. Reading in large files.
+Reading large files.
 
-Method one is using a list to store contents of large csv data:
+Method one is using a list to store contents of large CSV data:
 ```python
 def csv_reader(FILE_PATH):
     with open(FILE_PATH, 'r') as f:
@@ -177,11 +177,11 @@ This is not ideal because we load everything into memory at once.
 Method two is using a generator function:
 
 ```python
-def csv_reader1(FILE_PATH):
+def csv_reader(FILE_PATH):
     for row in open(FILE_PATH, 'r'):
         yield row
 ```
-This is better as we open the file, we yields each row instead of returning .
+This is better because as we open the file, we yield each row instead of returning.
 
 We can also use generator comprehension:
 ```python
