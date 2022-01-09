@@ -30,7 +30,7 @@ if x == 1 or y == 1 or z == 1:
 if 1 in (x, y, z):
     pass
 
-# these only test for truthy:
+# these only test for truthy
 if x or y or z:
     pass
 if any((x, y, z)):
@@ -55,7 +55,8 @@ if any((x, y, z)):
 ```
 
 ## String Character Check
-`any` takes in an iterable as its only argument and will return true if atleast one element of given iterable is true.
+`any` takes in an iterable as its only argument and will return true if at least one element of given iterable is true.
+
 ```py
 >>> password = 'carr0t33'
 >>> any(c.isdigit() for c in password)
