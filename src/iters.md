@@ -181,9 +181,8 @@ def csv_reader(FILE_PATH):
     for row in open(FILE_PATH, 'r'):
         yield row
 ```
-This is better because as we open the file, we yield each row instead of returning.
-
-We can also use generator comprehension:
+Or its generator comprehension equivalent:
 ```py
 csv_gen = (row for row in open(FILE_PATH))
 ```
+This is better because as we open the file, we yield each row instead of returning.
