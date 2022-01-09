@@ -7,7 +7,7 @@ All iterators are iterables, but not all iterables are iterators.
 
 ## Iterating manually
 Iterators have a built-in method called `next()` that gets the next value and moves the iterator forward.
-```python
+```py
 >>> e = enumerate('abc')
 >>> next(e)
 (0, 'a')
@@ -26,7 +26,7 @@ Here `e` remembers its position, and every time we call `next(e)` it gives us th
 
 ## Converting to iterators
 There is a built-in function called `iter()` that converts anything iterable into an iterator.
-```python
+```py
 >>> it = iter('abc')
 >>> it
 <str_iterator object at 0x7f987b860160>
@@ -43,7 +43,7 @@ StopIteration
 ```
 Calling `iter()` on anything non-iterable gives us an error.
 
-```python
+```py
 >>> iter(123)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -51,9 +51,9 @@ TypeError: 'int' object is not iterable
 ```
 
 ## Checking if object is iterable or not
-There is an easy way of checking if an object in python is iterable or not.
+There is an easy way of checking if an object in py is iterable or not.
 
-```python
+```py
 >>> def is_iterable(obj):
 ...     try:
 ...         it = iter(obj)
@@ -71,7 +71,7 @@ Here you can observe that the integer `123` is not iterable, but `abc` is a stri
 ## Generators
 
 Let's create a generator function.
-```python
+```py
 >>> def print_gen_func():
 ...     print('start')
 ...     yield 1
@@ -91,7 +91,7 @@ When the yield statement is hit, the program suspends function execution and ret
 When a function is suspended, the state of that function is saved. This includes any variable bindings local to the generator, the instruction pointer, the internal stack, and any exception handling.
 
 
-```python
+```py
 >>> p = gen_func()
 >>> next(p)
 start
@@ -116,7 +116,7 @@ StopIteration
 For example, say we want generate a list of people and then iterate through each person one by one.
 
 Method one is create and populate a list first:
-```python
+```py
 names = ['John', 'Amy', 'Adam', 'Zoe', 'Rick', 'Jessica']
 majors = ['Math', 'Engineering', 'Computer Science', 'Arts', 'Business']
 
@@ -133,7 +133,7 @@ def people_list(num):
 ```
 
 Method two is to use a generator function:
-```python
+```py
 def people_generator(num):
     for i in range(num):
         person = {
@@ -146,14 +146,14 @@ def people_generator(num):
 
 Both of these functions can be used like this:
 
-```python
+```py
 for person in generate_people():
     # do something here
 ```
 
 We compare the size of the list and the generator using `sys.getsizeof()` to get the memory size of the object (in bytes). Clearly, the generator function is significantly more memory optimsed.
 
-```python
+```py
 >>> num = 1000000
 >>> people0 = people_list(num)
 >>> sys.getsizeof(people0)
@@ -167,7 +167,7 @@ We compare the size of the list and the generator using `sys.getsizeof()` to get
 Reading large files.
 
 Method one is using a list to store contents of large CSV data:
-```python
+```py
 def csv_reader(FILE_PATH):
     with open(FILE_PATH, 'r') as f:
         return f.read().split('\n')
@@ -176,7 +176,7 @@ This is not ideal because we load everything into memory at once.
 
 Method two is using a generator function:
 
-```python
+```py
 def csv_reader(FILE_PATH):
     for row in open(FILE_PATH, 'r'):
         yield row
@@ -184,6 +184,6 @@ def csv_reader(FILE_PATH):
 This is better because as we open the file, we yield each row instead of returning.
 
 We can also use generator comprehension:
-```python
+```py
 csv_gen = (row for row in open(FILE_PATH))
 ```
