@@ -1,5 +1,5 @@
 <p align="center">
-<img src="images/py.png" width="128" height="128"/><br/>
+<img src="images/logo.png" width="128" height="128"/><br/>
 <h3 align="center">Python Notes</h3>
 <p align="center">My personal study notes relating to Python's quirks.</p>
 </p>
