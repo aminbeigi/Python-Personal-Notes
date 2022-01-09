@@ -1,4 +1,4 @@
-# Iterables, iterators and generators
+# Iterables, Iterators and Generators
 
 ## Iterators
 Iterators are iterables that remember their position. For example, `open('hello.txt', 'r')` and `enumerate('hello')` return iterators.
