@@ -37,7 +37,7 @@ if any((x, y, z)):
     pass
 ```
 
-## String Splicing Semantics
+## String Splicing
 ```py
 >>> s = 'Bruce Wayne'
 >>> s[:3]
