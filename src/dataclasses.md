@@ -2,7 +2,7 @@
 ## Dataclass
 Data classes are just regular classes that are geared towards storing state, rather than containing a lot of logic. Every time you create a class that mostly consists of attributes, you make a data class.
 
-What the dataclasses module does is to make it easier to create data classes. It takes care of a lot of boilerplate for you.
+The `dataclasses` module makes it easier to create data classes. It takes care of a lot of boilerplate for you.
 This is especially useful when your data class must be hashable; because this requires a `__hash__` method as well as an `__eq__` method. If you add a custom `__repr__` method for ease of debugging, that can become quite verbose:
 
 ```py
@@ -53,11 +53,11 @@ class InventoryItem:
         return self.unit_price * self.quantity_on_hand
 ```
 ## Named tuples
-`namedtuple` is a module inisde the built-in `collections` package. `namedtuple` classes are also data classes which are immutable.
-Named tuples basically add metadata to tuples, in the form of naming what each field does, and otherwise acts as a tuple.
+`namedtuple` is a module inside the built-in `collections` package. `namedtuple` classes are also data classes which are immutable.
+Named tuples basically add metadata to tuples, in the form of naming each field, and otherwise acts as a tuple.
 
 
-Say we wanted to store colours in RGB format in a tuple. We could use a data class but lets store our information in a tuple.
+Say we wanted to store colours in RGB format in a tuple. We could use a data class but lets store our information in a tuple.  
 For example, let us store the colour lime:
 ```py
 >>> Color = namedtuple('Color', ['red', 'green', 'blue'])
@@ -69,7 +69,7 @@ Color(red=75, green=100, blue=0)
 ```
 
 ## Why would I use `namedtuple` over a dataclass?
-* Tuples are more efficient than dataclasses (but of course contain less information).
+* Tuples are more efficient than data classes (but of course contain less information).
 
 ## Acknowledgement
 https://stackoverflow.com/questions/47955263/what-are-data-classes-and-how-are-they-different-from-common-classes
